@@ -1,8 +1,7 @@
-diff -u -r ../php-7.3.3/ext/pgsql/config.m4 ./ext/pgsql/config.m4
---- ../php-7.3.3/ext/pgsql/config.m4	2019-03-05 13:50:45.000000000 +0000
-+++ ./ext/pgsql/config.m4	2019-03-17 22:54:10.391031721 +0000
-@@ -8,12 +8,7 @@
-   PHP_EXPAND_PATH($PGSQL_INCLUDE, PGSQL_INCLUDE)
+--- a/ext/pgsql/config.m4
++++ b/ext/pgsql/config.m4
+@@ -11,12 +11,7 @@
+   dnl pkgconfig support was only introduced in 9.3
  
    AC_MSG_CHECKING(for pg_config)
 -  for i in $PHP_PGSQL $PHP_PGSQL/bin /usr/local/pgsql/bin /usr/local/bin /usr/bin ""; do
@@ -15,7 +14,7 @@ diff -u -r ../php-7.3.3/ext/pgsql/config.m4 ./ext/pgsql/config.m4
  
    if test -n "$PG_CONFIG"; then
      AC_MSG_RESULT([$PG_CONFIG])
-@@ -99,6 +94,11 @@
+@@ -70,6 +65,11 @@
    LDFLAGS=$old_LDFLAGS
  
    PHP_ADD_LIBRARY_WITH_PATH(pq, $PGSQL_LIBDIR, PGSQL_SHARED_LIBADD)
