@@ -1,6 +1,6 @@
---- ./sapi/fpm/www.conf.in
-+++ ./sapi/fpm/www.conf.in
-@@ -33,7 +33,7 @@
+--- a/sapi/fpm/www.conf.in
++++ b/sapi/fpm/www.conf.in
+@@ -38,7 +38,7 @@
  ;                            (IPv6 and IPv4-mapped) on a specific port;
  ;   '/path/to/unix/socket' - to listen on a unix socket.
  ; Note: This value is mandatory.
@@ -8,4 +8,4 @@
 +listen = @TERMUX_PREFIX@/var/run/php-fpm.sock
  
  ; Set listen(2) backlog.
- ; Default Value: 511 (-1 on FreeBSD and OpenBSD)
+ ; Default Value: 511 (-1 on Linux, FreeBSD and OpenBSD)
